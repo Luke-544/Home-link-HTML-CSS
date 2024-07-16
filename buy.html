@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Property</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="nav container">
+            <!-- Logo -->
+            <a href="index.html" class="logo"><i class='bx bx-home'></i>Home Link</a>
+          
+            <!-- Sign up button -->
+            <a href="sign-up.html" class="btn">Sign Up</a>
+        </div>
+    </header>
+     
+    <!-- Buy Form -->
+    <div class="buy container">
+        <div class="buy-container">
+            <h2>Enter Your Payment Details</h2>
+            <form id="buyForm">
+                <span>Enter your name</span>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <span>Enter your phone number</span>
+                <input type="tel" name="phone" placeholder="Your Phone Number" required>
+                <span>Enter your email address</span>
+                <input type="email" name="email" placeholder="yourmail@gmail.com" required>
+                <span>Property Price: <span id="propertyPrice">$0.00</span></span>
+                <input type="hidden" name="price" id="priceInput">
+                <input type="submit" value="Buy" class="button">
+            </form>
+        </div>  
+    </div>
+   
+    <!-- Footer -->
+    <section class="footer">
+        <div class="footer-container container">
+            <h2>Home Link</h2>
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <a href="#">Agency</a>
+                <a href="#">Building</a>
+                <a href="#">Rates</a>
+            </div>
+            <div class="footer-box">
+                <h3>Locations</h3>
+                <a href="#">Westlands</a>
+                <a href="#">West-end Towers</a>
+                <a href="#">Nairobi</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <a href="#">+254 112482493</a>
+                <a href="#">samuelmwaura422@gmail.com</a>
+                <div class="social">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>&#169; Maverick All Right Reserved</p>
+    </div>
+    
+    <!-- Mpesa Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script>
+        // Function to get query parameters
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                name: params.get('name'),
+                price: params.get('price')
+            };
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const { price } = getQueryParams();
+            document.getElementById('propertyPrice').innerText = `$${price}`;
+            document.getElementById('priceInput').value = price;
+        });
+
+        document.getElementById('buyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = event.target.name.value;
+            const phone = event.target.phone.value;
+            const email = event.target.email.value;
+            const price = event.target.price.value;
+
+            axios.post('YOUR_API_ENDPOINT', {
+                name: name,
+                phone: phone,
+                email: email,
+                amount: price,
+                phoneNumber: '+254112482493' // Replace with your phone number
+            })
+            .then(response => {
+                // Assuming the API response contains a status field
+                if(response.data.status === 'success') {
+                    // Send confirmation email
+                    axios.post('YOUR_EMAIL_API_ENDPOINT', {
+                        email: email,
+                        subject: 'Payment Successful',
+                        message: 'Your payment was successful.'
+                    })
+                    .then(() => {
+                        alert('Payment was successful and confirmation email sent.');
+                    })
+                    .catch(() => {
+                        alert('Payment was successful but confirmation email could not be sent.');
+                    });
+                } else {
+                    alert('Payment failed. Please try again.');
+                }
+            })
+            .catch(() => {
+                alert('Payment failed. Please try again.');
+            });
+        });
+    </script>
+</body>
+</html>

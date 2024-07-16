@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Properties - Home Link</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav container">
+            <a href="index.html" class="logo"><i class='bx bx-home'></i>Home Link</a>
+            <input type="checkbox" name="" id="Menu">
+            <label for="Menu"><i class='bx bx-menu' id="Menu-icon"></i></label>
+            <ul class="navbar">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#sales">Sales</a></li>
+                <li><a href="index.html#properties">Properties</a></li>
+                <li><a href="#">Purchase</a></li>
+            </ul>
+            <a href="login.html" class="btn">Log In</a>
+        </div>
+    </header>
+
+    <!-- Purchase Properties -->
+    <section class="purchase container" id="purchase">
+        <div class="header">
+            <span>Find Your Perfect Home</span>
+            <h2>Available Properties for Purchase</h2>
+            <div class="sort">
+                <label for="location">Sort by Location:</label>
+                <select name="location" id="location">
+                    <option value="Westlands">Westlands</option>
+                    <option value="Karen">Karen</option>
+                    <option value="Kiambu">Kiambu</option>
+                    <option value="Thika">Thika</option>
+                    <option value="Muthaiga">Muthaiga</option>
+                    <option value="Kileleshwa">Kileleshwa</option>
+                    <!-- Add options for specific locations -->
+                </select>
+                <label for="price">Sort by Price Range:</label>
+                <select name="price" id="price">
+                    <option value="1,000,000-5,000,000">1,000,000-5,000,000</option>
+                    <option value="5,000,000-10,000,000">5,000,000-10,000,000</option>
+                    <option value="10,000,000-15,000,000">10,000,000-15,000,000</option>
+                    <option value="15,000,000-20,000,000">15,000,000-20,000,000</option>
+                    <!-- Add options for price ranges -->
+                </select>
+            </div>
+        </div>
+        <div class="properties-container container">
+            <!-- Property Box 1 -->
+            <div class="box">
+                <img src="images/P10.jpg" alt="">
+                <h3>Ksh.10M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>The Palace</h3>
+                        <p>Ngong, Karen</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>5</span></i>
+                        <i class='bx bx-bath'><span>2</span></i>
+                    </div>
+                    <a href="buy.html?name=The%20Palace&price=10,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+            <!-- Property 2 -->
+            <div class="box">
+                <img src="images/P4.jpg" alt="">
+                <h3>Ksh.3M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>La Villa</h3>
+                        <p>Westlands, Nairobi</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>4</span></i>
+                        <i class='bx bx-bath'><span>2</span></i>
+                    </div>
+                    <a href="buy.html?name=La%20Villa&price=3,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+            <!-- Property 3 -->
+            <div class="box">
+                <img src="images/P9.jpg" alt="">
+                <h3>Ksh.14M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>Sunrise Homes</h3>
+                        <p>Muthaiga, Nairobi</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>5</span></i>
+                        <i class='bx bx-bath'><span>4</span></i>
+                    </div>
+                    <a href="buy.html?name=Sunrise%20Homes&price=14,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+            <!-- Property 4 -->
+            <div class="box">
+                <img src="images/P8.jpg" alt="">
+                <h3>Ksh.4M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>Kwangu Homes</h3>
+                        <p>Limuru, Kiambu</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>5</span></i>
+                        <i class='bx bx-bath'><span>2</span></i>
+                    </div>
+                    <a href="buy.html?name=Kwangu%20Homes&price=4,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+            <!-- Property 5 -->
+            <div class="box">
+                <img src="images/P11.jpg" alt="">
+                <h3>Ksh.20M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>La Maison</h3>
+                        <p>Karen, Nairobi</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>6</span></i>
+                        <i class='bx bx-bath'><span>5</span></i>
+                    </div>
+                    <a href="buy.html?name=La%20Maison&price=20,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+            <!-- Property 6 -->
+            <div class="box">
+                <img src="images/P12.jpg" alt="">
+                <h3>Ksh.15M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>Eved Homes</h3>
+                        <p>Membley,Nairobi</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>5</span></i>
+                        <i class='bx bx-bath'><span>3</span></i>
+                    </div>
+                    <a href="buy.html?name=Eved%20Homes&price=15,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+            <!-- Property 7 -->
+            <div class="box">
+                <img src="images/P16.jpg" alt="">
+                <h3>Ksh.20M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>Pazuri Homes</h3>
+                        <p>Karen, Nairobi</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>5</span></i>
+                        <i class='bx bx-bath'><span>4</span></i>
+                    </div>
+                    <a href="buy.html?name=Pazuri%20Homes&price=20,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+            <!-- Property 8 -->
+            <div class="box">
+                <img src="images/P17.jpg" alt="">
+                <h3>Ksh.15M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>Teripa Homes</h3>
+                        <p>Kiambu, Kiambu</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>5</span></i>
+                        <i class='bx bx-bath'><span>2</span></i>
+                    </div>
+                    <a href="buy.html?name=Teripa%20Homes&price=15,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+            <!-- Property 9 -->
+            <div class="box">
+                <img src="images/P18.jpg" alt="">
+                <h3>Ksh.10M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>Classic Homes</h3>
+                        <p>Kileleshwa, Nairobi</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>4</span></i>
+                        <i class='bx bx-bath'><span>3</span></i>
+                    </div>
+                    <a href="buy.html?name=Classic%20Homes&price=10,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+            <!-- Property 10 -->
+            <div class="box">
+                <img src="images/P19.jpg" alt="">
+                <h3>Ksh.15M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>Genevieve Homes</h3>
+                        <p>Ngong, Karen</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>4</span></i>
+                        <i class='bx bx-bath'><span>2</span></i>
+                    </div>
+                    <a href="buy.html?name=Genevieve%20Homes&price=15,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+            <!-- Property 11 -->
+            <div class="box">
+                <img src="images/P20.jpg" alt="">
+                <h3>Ksh.17M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>Hewett Homes</h3>
+                        <p>Muthaiga, Nairobi</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>5</span></i>
+                        <i class='bx bx-bath'><span>2</span></i>
+                    </div>
+                    <a href="buy.html?name=Hewett%20Homes&price=17,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+            <!-- Property 12 -->
+            <div class="box">
+                <img src="images/P21.jpg" alt="">
+                <h3>Ksh.5M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>Qwetu Homes</h3>
+                        <p>Kiambu, Kiambu</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>3</span></i>
+                        <i class='bx bx-bath'><span>2</span></i>
+                    </div>
+                    <a href="buy.html?name=Qwetu%20Homes&price=5,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+            <!-- Property 13 -->
+            <div class="box">
+                <img src="images/P22.jpg" alt="">
+                <h3>Ksh.1M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>Faulu Homes</h3>
+                        <p>Ngong, Karen</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>2</span></i>
+                        <i class='bx bx-bath'><span>2</span></i>
+                    </div>
+                    <a href="buy.html?name=Faulu%20Homes&price=1,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+            <!-- Property 14 -->
+            <div class="box">
+                <img src="images/P23.jpg" alt="">
+                <h3>Ksh.10M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>Amani Homes</h3>
+                        <p>Westlands, Nairobi</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>5</span></i>
+                        <i class='bx bx-bath'><span>2</span></i>
+                    </div>
+                    <a href="buy.html?name=Amani%20Homes&price=10,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+            <!-- Property 15 -->
+            <div class="box">
+                <img src="images/P24.jpg" alt="">
+                <h3>Ksh.13M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>Packard Homes</h3>
+                        <p>Kileleshwa, Nairobi</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>5</span></i>
+                        <i class='bx bx-bath'><span>3</span></i>
+                    </div>
+                    <a href="buy.html?name=Packard%20Homes&price=13,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+            <!-- Property 16 -->
+            <div class="box">
+                <img src="images/P25.jpg" alt="">
+                <h3>Ksh.12M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>Jipange Homes</h3>
+                        <p>Muthaiga, Nairobi</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>4</span></i>
+                        <i class='bx bx-bath'><span>2</span></i>
+                    </div>
+                    <a href="buy.html?name=Jipange%20Homes&price=12,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+            <!-- Property 17 -->
+            <div class="box">
+                <img src="images/P26.jpg" alt="">
+                <h3>Ksh.17M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>Mapema Homes</h3>
+                        <p>Karen, Nairobi</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>5</span></i>
+                        <i class='bx bx-bath'><span>3</span></i>
+                    </div>
+                    <a href="buy.html?name=Mapema%20Homes&price=17,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+            <!-- Property 18 -->
+            <div class="box">
+                <img src="images/P27.jpg" alt="">
+                <h3>Ksh.4M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>Poa Homes</h3>
+                        <p>Muthaiga, Nairobi</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>3</span></i>
+                        <i class='bx bx-bath'><span>2</span></i>
+                    </div>
+                    <a href="buy.html?name=Poa%20Homes&price=4,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+            <!-- Property 19 -->
+            <div class="box">
+                <img src="images/P28.jpg" alt="">
+                <h3>Ksh.8M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>Haven Homes</h3>
+                        <p>Westlands, Nairobi</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>3</span></i>
+                        <i class='bx bx-bath'><span>2</span></i>
+                    </div>
+                    <a href="buy.html?name=Haven%20Homes&price=8,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+            <!-- Property 20 -->
+            <div class="box">
+                <img src="images/P29.jpg" alt="">
+                <h3>Ksh.20M</h3>
+                <div class="content">
+                    <div class="text">
+                        <h3>Fincorp Homes</h3>
+                        <p>Kiambu, Kiambu</p>
+                    </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>5</span></i>
+                        <i class='bx bx-bath'><span>4</span></i>
+                    </div>
+                    <a href="buy.html?name=Fincorp%20Homes&price=20,000,000" class="btn">Buy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="footer-container container">
+            <h2>Home Link</h2>
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <a href="#">Agency</a>
+                <a href="#">Building</a>
+                <a href="#">Rates</a>
+            </div>
+            <div class="footer-box">
+                <h3>Locations</h3>
+                <a href="#">Westlands</a>
+                <a href="#">West-end Towers</a>
+                <a href="#">Nairobi</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <a href="#">+254 112482493</a>
+                <a href="#">samuelmwaura422@gmail.com</a>
+                <div class="social">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>&#169; Maverick  All Right Reserved</p>
+    </div>
+</body>
+</html>
